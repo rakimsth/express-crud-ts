@@ -33,5 +33,5 @@ app.use(express.json());
 app.use('/api/v1', router);
 
 app.listen(port, () => {
-	console.log(`Example app listening on port ${port}`);
+	console.log(`Example NoSQL app listening on port ${port}`);
 });
