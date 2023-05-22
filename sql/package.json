@@ -1,0 +1,25 @@
+{
+	"name": "express-boilerplate",
+	"version": "0.0.0",
+	"private": true,
+	"main": "nosql/build/index.js",
+	"scripts": {
+		"build": "mkdir ./sql/build && rm -r ./sql/build && tsc",
+		"start": "nodemon sql/src/index.ts",
+		"production": "npm run build && node sql/build/index.js",
+		"pretty": "prettier --write ."
+	},
+	"dependencies": {
+		"express": "~4.16.1",
+		"pg": "^8.11.0",
+		"pg-hstore": "^2.3.4",
+		"sequelize": "^6.31.1"
+	},
+	"devDependencies": {
+		"@types/node": "^20.2.3",
+		"nodemon": "^2.0.22",
+		"prettier": "^2.8.8",
+		"ts-node": "^10.9.1",
+		"typescript": "^5.0.4"
+	}
+}
