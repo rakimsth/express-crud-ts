@@ -1,11 +1,11 @@
-import express from 'express';
+import express, { Application } from 'express';
 import router from './routes';
 
 import models from './models';
 
-const app = express();
+const app: Application = express();
 
-const port = process.env.PORT || 3000;
+const port: number = Number(process.env.PORT) || 3000;
 
 app.use(express.json());
 app.use('/api/v1', router);

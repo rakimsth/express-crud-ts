@@ -1,10 +1,10 @@
-import express from 'express';
+import express, { Application } from 'express';
 import router from './routes';
 import mongoose from 'mongoose';
 
-const app = express();
+const app: Application = express();
 
-const port = process.env.PORT || 3000;
+const port: number = Number(process.env.PORT) || 3000;
 
 type Options = {
 	autoIndex: boolean;
