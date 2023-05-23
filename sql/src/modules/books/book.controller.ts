@@ -4,7 +4,6 @@ import Book from '../../models/book.model';
 import { IBook } from './book.types';
 
 export const add = async (payload: Required<IBook>): Promise<IBook> => {
-	console.log('here', payload);
 	return Book.create(payload);
 };
 
